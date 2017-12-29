@@ -1,0 +1,141 @@
+
+
+*{font-family:Verdana}
+
+QPushButton{
+	background-color:rgba(0,0,0,0);
+	padding:15px;
+	border-radius:45px;
+	outline:none;
+	qproperty-iconSize:60px;
+}
+
+QPushButton:hover{
+	background-color:rgba(0,0,0,0.1);
+}
+
+QPushButton:focus{
+	background-color:rgba(0,0,0,0.15);
+}
+
+QSlider{
+	background-color:rgba(0,0,0,0);
+	padding:25px;
+}
+
+QSlider::groove:horizontal{
+	height:8px;
+	border-radius:4px;
+	background-color:rgb(97,97,97)
+}
+
+QSlider::handle:horizontal{
+	background:white;
+	width:16px;
+	margin-top:-4px;
+	margin-bottom:-4px;
+	border-radius:8px;
+}
+
+QSlider::sub-page:horizontal{
+	background-color:white;
+	border-radius:4px;
+}
+
+QLabel {
+	color:rgb(158,158,158);
+	background-color:rgba(0,0,0,0);
+	font-size:20px
+}
+
+#this {
+	background-color:white;
+}
+
+#centralWidget {
+	border-image:url(:/Images/Oso.svg);
+}
+
+#playButton, #selectLetterButton {
+	border-radius:55px;
+	qproperty-iconSize:80px;
+}
+
+#findMoveButton, #pauseButton, #resetButton, #closeButton{
+	border-radius:27px;
+	qproperty-iconSize: 45px;
+	padding:5px;
+}
+
+#exitButton,#minimizeButton {
+	padding:3px;
+	border-radius:12px;
+	qproperty-iconSize: 20px;}
+
+#headerWidget {
+	background-color : rgba(255, 255, 255, 0.7)
+}
+
+#gameWidget{
+	background-color:rgba(255,255,255,0)
+}
+
+#settingWidget{
+	background-color:rgba(33,33,33,0.9);
+	border-radius:5px;
+}
+
+#settingLabel{
+	color:rgb(33,33,33);
+	font-size:36px;
+}
+
+#scoreWidget{
+	background-color:rgba(33,33,33,0.9);
+	border-radius:5px;
+}
+
+#scoreLabel{
+	color:rgb(33,33,33);
+	font-size:36px;
+}
+
+#backButton{
+	background-color:rgba(0,0,0,0);
+	border-radius:2px;
+	color:white;
+}
+
+#backButton2{
+	background-color:rgba(0,0,0,0);
+	border-radius:2px;
+	color:white;
+}
+
+#backButton:hover{
+	background-color:rgb(74,74,74);
+}
+#backButton:focus{
+	background-color:rgb(89,89,89);
+}
+
+#backButton2:hover{
+	background-color:rgb(74,74,74);
+}
+#backButton2:focus{
+	background-color:rgb(89,89,89);
+}
+
+#customsLabel{
+	color:rgba(158,158,158,0.5);
+	font-size:18px;
+}
+
+#difficultySlider::groove:horizontal{
+	height:8px;
+	border-radius:4px;
+	background-color:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgb(67,176,92), stop:0.5 rgb(235,186,22), stop:1 rgb(221,53,46)); }
+
+#difficultySlider::sub-page:horizontal{
+	background-color:rgba(255,255,255,0.5)
+}

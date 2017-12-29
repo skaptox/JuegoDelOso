@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/Oso.svg</file>
+        <file>Fonts/Roboto-Light.ttf</file>
+        <file>Fonts/Roboto-Thin.ttf</file>
+        <file>Icons/binoculars.svg</file>
+        <file>Icons/error.svg</file>
+        <file>Icons/minus.svg</file>
+        <file>Icons/music-player-1.svg</file>
+        <file>Icons/mute.svg</file>
+        <file>Icons/pause.svg</file>
+        <file>Icons/pause-1.svg</file>
+        <file>Icons/photo-camera.svg</file>
+        <file>Icons/play-button-1.svg</file>
+        <file>Icons/plus.svg</file>
+        <file>Icons/repeat-1.svg</file>
+        <file>Icons/search.svg</file>
+        <file>Icons/settings.svg</file>
+        <file>Icons/share.svg</file>
+        <file>Icons/stop-1.svg</file>
+        <file>Icons/success.svg</file>
+        <file>Icons/user-1.svg</file>
+        <file>Icons/user-2.svg</file>
+        <file>Icons/user-3.svg</file>
+        <file>Icons/user-4.svg</file>
+        <file>Icons/user-5.svg</file>
+        <file>Icons/warning.svg</file>
+        <file>Icons/minus-1.svg</file>
+        <file>Icons/add-1.svg</file>
+        <file>Icons/flag-2.svg</file>
+        <file>Icons/flag-1.svg</file>
+        <file>Icons/flag-3.svg</file>
+        <file>Icons/alarm.svg</file>
+        <file>Icons/fingerprint.svg</file>
+        <file>Icons/hold.svg</file>
+        <file>Icons/compose.svg</file>
+        <file>Css/Style.css</file>
+        <file>Images/o.svg</file>
+        <file>Images/s.svg</file>
+    </qresource>
+</RCC>
