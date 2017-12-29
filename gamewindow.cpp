@@ -48,24 +48,24 @@ _format(7), _volume(50) {
   //! Main Buttons
 
   Button *playButton = make<Button>("playButton",
-    ":/Icons/play-button-1.svg");
+    ":/Icons/play-button-1.png");
 
   connect(playButton, SIGNAL(clicked()), this, SLOT(playButtonClicked()));
 
   Button *settingsButton = make<Button>("settingsButton",
-    ":/Icons/settings.svg");
+    ":/Icons/settings.png");
   connect(settingsButton, SIGNAL(clicked()), this,
     SLOT(settingsButtonClicked()));
 
-  Button *audioButton = make<Button>("audioButton", ":/Icons/mute.svg");
+  Button *audioButton = make<Button>("audioButton", ":/Icons/mute.png");
   connect(audioButton, SIGNAL(clicked()), this, SLOT(audioButtonClicked()));
 
   //! Player Buttons
 
-  Button *player1Button = make<Button>("player1Button", ":/Icons/user-2.svg");
+  Button *player1Button = make<Button>("player1Button", ":/Icons/user-2.png");
   _player1State = 2;
 
-  Button *player2Button = make<Button>("player2Button", ":/Icons/user-1.svg");
+  Button *player2Button = make<Button>("player2Button", ":/Icons/user-1.png");
   _player2State = 1;
 
   for (const auto &item : {player1Button, player2Button}) {
@@ -94,11 +94,11 @@ _format(7), _volume(50) {
 
   //! Window Buttons
 
-  Button *exitButton = make<Button>("exitButton", ":/Icons/add-1.svg");
+  Button *exitButton = make<Button>("exitButton", ":/Icons/add-1.png");
   connect(exitButton, SIGNAL(clicked()), this, SLOT(close()));
 
   Button *minimizeButton = make<Button>("minimizeButton",
-    ":/Icons/minus-1.svg");
+    ":/Icons/minus-1.png");
   connect(minimizeButton, SIGNAL(clicked()), this, SLOT(showMinimized()));
 
   QHBoxLayout *windowButtonsLayout = make<QHBoxLayout>("windowButtonsLayout",
@@ -124,7 +124,7 @@ _format(7), _volume(50) {
 
   //! Soundtracks
 
-  /*
+
   QString dir = QDir::currentPath() + "/Audios/[NCM] Island - MBB.aac";
   playlist = new QMediaPlaylist(this);
   playlist->addMedia(QUrl::fromLocalFile(dir));
@@ -134,7 +134,7 @@ _format(7), _volume(50) {
   _music->setPlaylist(playlist);
   _music->setVolume(_volume);
   _music->play();
-  */
+
 }
 
 void GameWindow::GameMatch() {
@@ -162,10 +162,10 @@ void GameWindow::audioButtonClicked() {
 
   if (_music->state() == QMediaPlayer::PausedState) {
     _music->play();
-    button->setIcon(QIcon(":/Icons/mute.svg"));
+    button->setIcon(QIcon(":/Icons/mute.png"));
   } else {
     _music->pause();
-    button->setIcon(QIcon(":/Icons/music-player-1.svg"));
+    button->setIcon(QIcon(":/Icons/music-player-1.png"));
   }
 }
 
@@ -229,7 +229,7 @@ void GameWindow::playerButtonClicked() {
   else
       player = 1;
 
-  button->setIcon(QIcon(":/Icons/user-"+ QString::number(player)+".svg"));
+  button->setIcon(QIcon(":/Icons/user-"+ QString::number(player)+".png"));
 }
 
 void GameWindow::settingsButtonClicked() {
@@ -405,12 +405,12 @@ void GameWindow::showFinalScore(std::pair<int, int> score) {
 
     QLabel *player1Image = new QLabel();
     player1Image->setPixmap(QPixmap(":/Icons/user-" +
-      QString::number(_player1State)+".svg"));
+      QString::number(_player1State)+".png"));
 
 
     QLabel * player2Image = new QLabel();
     player2Image->setPixmap(QPixmap(":/Icons/user-" +
-      QString::number(_player2State)+".svg"));
+      QString::number(_player2State)+".png"));
 
     QLabel *score1 = new QLabel(QString::number(score.first));
     QLabel *score2 = new QLabel(QString::number(score.second));

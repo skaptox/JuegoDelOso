@@ -338,39 +338,57 @@ qrc_oso.cpp: oso.qrc \
 		Css/Style.css \
 		Fonts/Roboto-Light.ttf \
 		Fonts/Roboto-Thin.ttf \
-		Icons/error.svg \
 		Icons/stop-1.svg \
-		Icons/alarm.svg \
-		Icons/repeat-1.svg \
-		Icons/flag-1.svg \
+		Icons/plus.svg \
+		Icons/minus.svg \
 		Icons/flag-2.svg \
-		Icons/music-player-1.svg \
-		Icons/flag-3.svg \
+		Icons/binoculars.svg \
+		Icons/success.svg \
+		Icons/add-1.png \
+		Icons/minus-1.png \
+		Icons/repeat-1.svg \
 		Icons/settings.svg \
-		Icons/user-1.svg \
-		Icons/compose.svg \
-		Icons/user-2.svg \
+		Icons/compose.png \
+		Icons/flag-1.svg \
 		Icons/share.svg \
-		Icons/user-3.svg \
+		Icons/mute.png \
+		Icons/alarm.svg \
+		Icons/user-5.svg \
+		Icons/error.svg \
 		Icons/pause-1.svg \
 		Icons/user-4.svg \
-		Icons/user-5.svg \
-		Icons/plus.svg \
-		Icons/minus-1.svg \
-		Icons/search.svg \
-		Icons/minus.svg \
-		Icons/photo-camera.svg \
-		Icons/binoculars.svg \
-		Icons/fingerprint.svg \
-		Icons/mute.svg \
-		Icons/success.svg \
-		Icons/pause.svg \
-		Icons/hold.svg \
 		Icons/warning.svg \
+		Icons/settings.png \
+		Icons/repeat-1.png \
+		Icons/pause.svg \
+		Icons/user-3.svg \
+		Icons/music-player-1.svg \
+		Icons/user-2.svg \
+		Icons/error.png \
+		Icons/hold.svg \
+		Icons/search.svg \
+		Icons/pause-1.png \
+		Icons/photo-camera.svg \
+		Icons/pause.png \
+		Icons/user-1.svg \
 		Icons/play-button-1.svg \
+		Icons/user-3.png \
+		Icons/music-player-1.png \
+		Icons/minus-1.svg \
+		Icons/user-2.png \
 		Icons/add-1.svg \
+		Icons/search.png \
+		Icons/compose.svg \
+		Icons/fingerprint.svg \
+		Icons/user-1.png \
+		Icons/mute.svg \
+		Icons/play-button-1.png \
+		Icons/flag-3.svg \
 		Images/s.svg \
+		Images/Oso.png \
+		Images/o.png \
 		Images/Oso.svg \
+		Images/s.png \
 		Images/o.svg
 	/usr/lib/i386-linux-gnu/qt5/bin/rcc -name oso oso.qrc -o qrc_oso.cpp
 

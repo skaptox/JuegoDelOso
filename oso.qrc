@@ -37,5 +37,23 @@
         <file>Css/Style.css</file>
         <file>Images/o.svg</file>
         <file>Images/s.svg</file>
+        <file>Images/o.png</file>
+        <file>Images/Oso.png</file>
+        <file>Images/s.png</file>
+        <file>Icons/pause-1.png</file>
+        <file>Icons/pause.png</file>
+        <file>Icons/user-3.png</file>
+        <file>Icons/user-2.png</file>
+        <file>Icons/user-1.png</file>
+        <file>Icons/settings.png</file>
+        <file>Icons/repeat-1.png</file>
+        <file>Icons/play-button-1.png</file>
+        <file>Icons/mute.png</file>
+        <file>Icons/music-player-1.png</file>
+        <file>Icons/error.png</file>
+        <file>Icons/compose.png</file>
+        <file>Icons/search.png</file>
+        <file>Icons/add-1.png</file>
+        <file>Icons/minus-1.png</file>
     </qresource>
 </RCC>

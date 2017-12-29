@@ -13,6 +13,7 @@
 #include <QtConcurrent/QtConcurrent>
 #include <QThread>
 #include <QWidget>
+#include <QIcon>
 
 #include <math.h>
 #include <functional>
@@ -41,19 +42,18 @@ QWidget *parent)  : QWidget(parent), _format(format) {
   //! Players Images
 
   _player1Image = new QLabel();
+  QIcon i1(":/Icons/user-" + QString::number(p1) + ".png");
+  _player1Image->setPixmap(i1.pixmap(50, 60));
 
-  _player1Image->setPixmap(QPixmap(":/Icons/user-" +
-    QString::number(p1) + ".svg"));
 
   _player2Image = new QLabel();
-
-  _player2Image->setPixmap(QPixmap(":/Icons/user-" +
-    QString::number(p2) + ".svg"));
+  QIcon i2(":/Icons/user-" + QString::number(p2) + ".png");
+  _player2Image->setPixmap(i2.pixmap(60, 60));
 
   _player2Image->setEnabled(false);
 
   Button *selectLetterButton = make<Button>("selectLetterButton",
-    ":/Icons/compose.svg");
+    ":/Icons/compose.png");
   connect(selectLetterButton, SIGNAL(clicked()), this, SLOT(changeLetter()));
 
   //! Score boards
@@ -82,18 +82,18 @@ QWidget *parent)  : QWidget(parent), _format(format) {
 
   //! Utility Buttons
 
-  Button *findMoveButton = make<Button>("findMoveButton", ":/Icons/search.svg");
+  Button *findMoveButton = make<Button>("findMoveButton", ":/Icons/search.png");
   connect(findMoveButton, SIGNAL(clicked()), this,
     SLOT(findMoveButtonClicked()));
 
-  Button *pauseButton = make<Button>("pauseButton", ":/Icons/pause-1.svg");
+  Button *pauseButton = make<Button>("pauseButton", ":/Icons/pause-1.png");
   connect(pauseButton, SIGNAL(clicked()), this, SLOT(pauseButtonClicked()));
 
-  Button *resetButton = make<Button>("resetButton", ":/Icons/repeat-1.svg");
+  Button *resetButton = make<Button>("resetButton", ":/Icons/repeat-1.png");
   connect(resetButton, SIGNAL(clicked()), this, SLOT(resetButtonClicked()));
   resetButton->hide();
 
-  Button *closeButton = make<Button>("closeButton", ":/Icons/error.svg");
+  Button *closeButton = make<Button>("closeButton", ":/Icons/error.png");
   connect(closeButton, SIGNAL(clicked()), this, SLOT(closeGame()));
   closeButton->hide();
 
@@ -194,7 +194,7 @@ void Game::paintEvent(QPaintEvent *e) {
     col = 0;
     for (const auto & item : it) {
       STATE state(_data.board->statusSquare(row, col));
-      letter.load(state == STATE::S ? ":/Images/s.svg" : ":/Images/o.svg");
+      letter.load(state == STATE::S ? ":/Images/s.png" : ":/Images/o.png");
 
       if (state == STATE::EMPTY) {
         _painter->fillRect(item.rect, QColor(33, 33, 33, 230));  // Gray
@@ -238,7 +238,7 @@ void Game::paintEvent(QPaintEvent *e) {
 
   if (_wildCard.state != STATE::EMPTY) {
     letter.load(_wildCard.state == STATE::S ?
-      ":/Images/s.svg" : ":/Images/o.svg");
+      ":/Images/s.png" : ":/Images/o.png");
 
     int r = _wildCard.row;
     int c = _wildCard.col;
@@ -359,11 +359,11 @@ void Game::pauseButtonClicked() {
     if (_data.status == Status::Paused) {
        sk::setVisible(layout, {1, 2}, false);
        sk::setVisible(layout, {3, 4}, true);
-      pauseButton->setIcon(QIcon(":/Icons/play-button-1.svg"));
+      pauseButton->setIcon(QIcon(":/Icons/play-button-1.png"));
     } else {
        sk::setVisible(layout, {1, 2}, true);
        sk::setVisible(layout, {3, 4}, false);
-      pauseButton->setIcon(QIcon(":/Icons/pause-1.svg"));
+      pauseButton->setIcon(QIcon(":/Icons/pause-1.png"));
     }
   }
 }
