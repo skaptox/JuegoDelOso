@@ -403,13 +403,13 @@ void GameWindow::showFinalScore(std::pair<int, int> score) {
     scoreLabel->show();
 
     QLabel *player1Image = new QLabel();
-    player1Image->setPixmap(QPixmap(":/Icons/user-" +
-      QString::number(_player1State)+".png"));
 
+    QIcon i1(":/Icons/user-" + QString::number(_player1State)+".png");
+    player1Image->setPixmap(i1.pixmap(80, 80));
 
     QLabel * player2Image = new QLabel();
-    player2Image->setPixmap(QPixmap(":/Icons/user-" +
-      QString::number(_player2State)+".png"));
+    QIcon i2(":/Icons/user-" + QString::number(_player2State)+".png");
+    player2Image->setPixmap(i1.pixmap(80, 80));
 
     QLabel *score1 = new QLabel(QString::number(score.first));
     QLabel *score2 = new QLabel(QString::number(score.second));
