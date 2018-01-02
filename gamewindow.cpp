@@ -24,8 +24,8 @@ using sk::make;
 using std::cout;
 using std::endl;
 
-GameWindow::GameWindow(QWidget *parent) : QWidget(parent), _difficulty(4),
-_format(7), _volume(50) {
+GameWindow::GameWindow(QWidget *parent) : QWidget(parent), _difficulty(2),
+_format(9), _volume(50) {
   //! Detect screen resolution
 
   QDesktopWidget widget;
