@@ -111,7 +111,7 @@ _format(7), _volume(50) {
 
   QVBoxLayout *mainLayout = make<QVBoxLayout>("mainLayout");
 
-  mainLayout->addLayout(windowButtonsLayout);
+  //mainLayout->addLayout(windowButtonsLayout);
   mainLayout->addWidget(_centralWidget);
   mainLayout->setContentsMargins(10, 0, 10, 0);
 
