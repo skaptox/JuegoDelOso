@@ -167,18 +167,6 @@ Move playAI(Board &board, int d, bool turn, int P1G, int P2G) {
   deterministValue(movements, board);
   sortMoves(movements);
 
-  /*
-
-  int maxDValue = (*std::max_element(movements.begin(),
-    movements.end())).dValue;
-
-  movements.erase(std::remove_if(movements.begin(), movements.end(),
-    [&] (const Move& mv) {
-      return mv.dValue < maxDValue;
-    }), movements.end());
-
-  */
-
   int hValue, dValue;
   int maxHValue = -1000;
   int minHValue = 1000;
@@ -218,15 +206,6 @@ Move playAI(Board &board, int d, bool turn, int P1G, int P2G) {
 
   movements.erase(std::remove_if(movements.begin(), movements.end(), lambda),
     movements.end());
-
-  /*
-  cout << "\nMejores movimientos\n" << endl;
-
-  int j = 1;
-  for (auto i : movements) {
-    cout << j++ << " " << printMove(i);
-  }
-  */
 
   srand(time(0));
   int mod = movements.empty() ? 1 : movements.size();
