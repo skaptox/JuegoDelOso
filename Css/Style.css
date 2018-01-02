@@ -42,11 +42,26 @@ QSlider::sub-page:horizontal{
 	border-radius:4px;
 }
 
+
+QProgressBar:horizontal {
+	height:15px;
+	padding: 5px;
+	background:rgba(0,0,0,0);
+	border-color: rgb(200,200,200);
+}
+
+QProgressBar::chunk:horizontal {
+	background-color: rgb(35,172,67);
+	border-radius: 7px;
+}
+
+
 QLabel {
 	color:rgb(158,158,158);
 	background-color:rgba(0,0,0,0);
 	font-size:20px
 }
+
 
 #this {
 	background-color:white;

@@ -286,16 +286,16 @@ void GameWindow::settingsButtonClicked() {
 
     //!  _difficulty Label
 
-    QLabel *_difficultyLabel = new QLabel("Dificultad");
+    QLabel *difficultyLabel = new QLabel("Dificultad");
 
     //! _difficulty Slider
 
-    QSlider *_difficultySlider = new QSlider(Qt::Horizontal);
-    _difficultySlider->setObjectName("_difficultySlider");
+    QSlider *difficultySlider = new QSlider(Qt::Horizontal);
+    difficultySlider->setObjectName("difficultySlider");
 
-    _difficultySlider->setRange(100, 400);
-    _difficultySlider->setValue(_difficulty*100);
-    connect(_difficultySlider, SIGNAL(valueChanged(int)), this,
+    difficultySlider->setRange(100, 400);
+    difficultySlider->setValue(_difficulty*100);
+    connect(difficultySlider, SIGNAL(valueChanged(int)), this,
       SLOT(sliderChanged()));
 
     //! Music
@@ -326,8 +326,8 @@ void GameWindow::settingsButtonClicked() {
     layout->addWidget(boardSizeLabel, 1, 0);
     layout->addWidget(boardSizeSlider, 1, 1);
 
-    layout->addWidget(_difficultyLabel, 2, 0);
-    layout->addWidget(_difficultySlider, 2, 1);
+    layout->addWidget(difficultyLabel, 2, 0);
+    layout->addWidget(difficultySlider, 2, 1);
 
     layout->addWidget(musicLabel, 3, 0);
     layout->addWidget(musicSlider, 3, 1);

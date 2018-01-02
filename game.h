@@ -21,8 +21,8 @@ class QProgressBar;
 class QPushButton;
 class QRect;
 class QSize;
-
-
+class QTimer;
+class QElapsedTimer;
 
 struct Box {
   QRect rect;
@@ -78,7 +78,10 @@ class Game : public QWidget {
   QFuture<void> _future;
   QLabel *_display1, *_display2, *_letter, *_player1Image, *_player2Image;
   QPainter *_painter;
+  QProgressBar *_timeProgressBar;
   QSize *_squareSize;
+  QTimer *_timer;
+  QElapsedTimer *_elapsedTimer;
 
  private slots:
   void changeLetter();
@@ -87,6 +90,7 @@ class Game : public QWidget {
   void pauseButtonClicked();
   void update();
   void gameIsOver();
+  void updateProgressBar();
  public slots:
   void resetButtonClicked();
 };

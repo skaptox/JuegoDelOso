@@ -14,6 +14,7 @@
 #include <QThread>
 #include <QWidget>
 #include <QIcon>
+#include <QElapsedTimer>
 
 #include <math.h>
 #include <functional>
@@ -112,6 +113,21 @@ QWidget *parent)  : QWidget(parent), _format(format) {
     buttonsLayout->addWidget(item);
   }
 
+  //! Time's Progress Bar
+
+  _timeProgressBar = new QProgressBar();
+  _timeProgressBar->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+  _timeProgressBar->setRange(1,60);
+  _timeProgressBar->setTextVisible(false);
+  _timeProgressBar->setValue(60);
+  _timer = new QTimer(this);
+  _timer->start(1000);
+
+  connect(_timer, &QTimer::timeout, this, &Game::updateProgressBar);
+
+  _elapsedTimer = new QElapsedTimer();
+  _elapsedTimer->start();
+
   //! Adding previous layouts to a widget's layout
 
   QVBoxLayout *headerLayout = make<QVBoxLayout>("headerLayout",
@@ -119,6 +135,7 @@ QWidget *parent)  : QWidget(parent), _format(format) {
 
   headerLayout->addLayout(topLayout);
   headerLayout->addLayout(buttonsLayout);
+  headerLayout->addWidget(_timeProgressBar);
 
   QWidget *headerWidget = make<QWidget>("headerWidget", this);
 
@@ -373,7 +390,16 @@ void Game::update() {
 }
 
 void Game::gameIsOver() {
-  emit(gameOver(std::make_pair(_data.score1, _data.score2)));
+    emit(gameOver(std::make_pair(_data.score1, _data.score2)));
+}
+
+void Game::updateProgressBar() {
+  qint64 time = _elapsedTimer->nsecsElapsed() / 1000000000;
+  if (time < 58) {
+    _timeProgressBar->setValue(60 - time);
+  } else {
+      _elapsedTimer->restart();
+  }
 }
 
 void Game::resetButtonClicked() {
