@@ -3,7 +3,9 @@
 #ifndef GAME_H_
 #define GAME_H_
 
+#include <QFuture>
 #include <QWidget>
+
 
 #include <utility>
 #include <vector>
@@ -19,6 +21,8 @@ class QProgressBar;
 class QPushButton;
 class QRect;
 class QSize;
+
+
 
 struct Box {
   QRect rect;
@@ -71,6 +75,7 @@ class Game : public QWidget {
   int _format;
 
   Move _wildCard;
+  QFuture<void> _future;
   QLabel *_display1, *_display2, *_letter, *_player1Image, *_player2Image;
   QPainter *_painter;
   QSize *_squareSize;

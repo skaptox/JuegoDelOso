@@ -55,5 +55,6 @@
         <file>Icons/search.png</file>
         <file>Icons/add-1.png</file>
         <file>Icons/minus-1.png</file>
+        <file>Audios/[NCM] Island - MBB.aac</file>
     </qresource>
 </RCC>

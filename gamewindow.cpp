@@ -124,10 +124,9 @@ _format(7), _volume(50) {
 
   //! Soundtracks
 
-
-  QString dir = QDir::currentPath() + "/Audios/[NCM] Island - MBB.aac";
   playlist = new QMediaPlaylist(this);
-  playlist->addMedia(QUrl::fromLocalFile(dir));
+  QMediaContent soundtrack(QUrl("qrc:/Audios/[NCM] Island - MBB.aac"));
+  playlist->addMedia(soundtrack);
   playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
   _music.reset(new QMediaPlayer(this));

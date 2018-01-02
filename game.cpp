@@ -265,7 +265,7 @@ void Game::mousePressEvent(QMouseEvent *e) {
   }
 
   if (_playAIvsAI) {
-    QFuture<void> future = QtConcurrent::run(_agent, &Agent::aiVsAi, &_data);
+    _future = QtConcurrent::run(_agent, &Agent::aiVsAi, &_data);
     return;
   }
 
@@ -297,7 +297,7 @@ void Game::mousePressEvent(QMouseEvent *e) {
           } else {
             _data.turn = !_data.turn;
             if (_playAI) {
-              QFuture<void> future = QtConcurrent::run(_agent,
+              _future = QtConcurrent::run(_agent,
                 &Agent::playAgent, &_data);
             }
           }
@@ -413,6 +413,7 @@ void Game::markBoardSquares(const vector<Move> &squaresList, DataGame &data) {
 }
 
 Game::~Game() {
+  _future.waitForFinished();
   delete _data.board;
   delete _squareSize;
   qDebug() << "Destructor de game";

@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <vector>
+#include <QThread>
 
 #include "./agent.h"
 #include "./ai.h"
@@ -121,6 +122,7 @@ void Agent::playAgent(DataGame * data) const {
       int row = data->lastMove.row;
       int col = data->lastMove.col;
       Game::markBoardSquares(data->board->squaresOsoAround(row, col), *data);
+      QThread::msleep(500);
     } else {
       data->turn = !data->turn;
     }
