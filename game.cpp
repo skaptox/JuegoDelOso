@@ -117,7 +117,7 @@ QWidget *parent)  : QWidget(parent), _format(format) {
 
   _timeProgressBar = new QProgressBar();
   _timeProgressBar->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-  _timeProgressBar->setRange(1,60);
+  _timeProgressBar->setRange(0,60);
   _timeProgressBar->setTextVisible(false);
   _timeProgressBar->setValue(60);
   _timer = new QTimer(this);
@@ -293,6 +293,7 @@ void Game::mousePressEvent(QMouseEvent *e) {
 
       if (positionIsValid && squareIsEmpty && _data.status == Status::Start) {
         int points = 0;
+        _elapsedTimer->restart();
 
         if (_data.turn) {  // If player one
           STATE state(_letter->text() == "S" ? STATE::S : STATE::O);
@@ -394,8 +395,8 @@ void Game::gameIsOver() {
 }
 
 void Game::updateProgressBar() {
-  qint64 time = _elapsedTimer->nsecsElapsed() / 1000000000;
-  if (time < 58) {
+  qint64 time = _elapsedTimer->elapsed() / 1000;
+  if (time < 60) {
     _timeProgressBar->setValue(60 - time);
   } else {
       _elapsedTimer->restart();
