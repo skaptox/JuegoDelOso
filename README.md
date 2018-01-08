@@ -1,6 +1,6 @@
 # JuegoDelOso (artificial intelligence)
 
-This project is been developep by @ramonhoyo and me!
+This project is being developed by @ramonhoyo and me!
 
 OSO/SOS is paper and pencil game for two or more players. It is similar to tic-tac-toe and dots and boxes, but has greater complexity.
 SOS is a combinatorial game when played with two players. In terms of game theory, it is a zero-sum, sequential game with perfect information.
