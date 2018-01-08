@@ -121,7 +121,7 @@ QWidget *parent)  : QWidget(parent), _format(format) {
   _timeProgressBar->setTextVisible(false);
   _timeProgressBar->setValue(60);
   _timer = new QTimer(this);
-  _timer->start(1000);
+  _timer->start(1000); // To call updateProgressBar each 1 second
 
   connect(_timer, &QTimer::timeout, this, &Game::updateProgressBar);
 
