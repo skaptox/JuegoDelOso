@@ -1,4 +1,4 @@
-# JuegoDelOso (With artificial inteligent)
+# JuegoDelOso (artificial intelligence)
 
 This project is been developep by @ramonhoyo and me!
 
